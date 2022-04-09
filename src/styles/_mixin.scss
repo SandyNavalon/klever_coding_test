@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Odia:wght@100;200;300;400&display=swap');
+
+@mixin btn {
+  background-color: rgba(240, 248, 255, 0.742);
+  border-radius: 10px;
+}
+
+@mixin btn-hover{
+  transform: translateY(-2px);
+}
+
+@mixin card{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  font-family: 'Anek Odia', sans-serif;
+  background: rgba(255, 255, 255, 0.737);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 3.5px );
+  -webkit-backdrop-filter: blur( 3.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+  h2{
+    margin-top: 10px;
+  }
+
+
+}
+

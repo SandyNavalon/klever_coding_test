@@ -1,0 +1,41 @@
+@use '../../../styles/index.scss' as *;
+
+.container{
+  background: transparent;
+  display: flex;
+}
+.card{
+  @include card;
+  margin-top: 20px;
+  border-radius: 20px;
+
+
+  .btn-group{
+    display: flex;
+
+    .btn{
+      @include btn;
+      margin-right: 20px;
+
+      &-add{
+        color: #4fcc59;
+        border: 1px #3ea14d;
+      }
+      &-add:not([disabled]):hover{
+        @include btn-hover;
+      }
+
+      &-cancel{
+        color: #c93434f1;
+        border: 1px #c93434f1;
+        background-color: rgba(240, 248, 255, 0.742)
+      }
+
+      &-cancel:not([disabled]):hover{
+        @include btn-hover;
+      }
+    }
+  }
+
+}
+

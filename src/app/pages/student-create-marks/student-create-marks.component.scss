@@ -1,0 +1,38 @@
+@use '../../../styles/index.scss' as *;
+
+.container{
+  background: transparent;
+  display: flex;
+}
+.card{
+  @include card;
+  margin-top: 20px;
+  border-radius: 20px;
+
+
+  .btn-group{
+    display: flex;
+
+    .btn{
+      @include btn;
+      margin-right: 20px;
+
+      &-add{
+        color: #4f5bcc;
+      }
+      &-add:not([disabled]):hover{
+        @include btn-hover;
+      }
+
+      &-cancel{
+        color: #c93434f1;
+      }
+
+      &-cancel:not([disabled]):hover{
+        @include btn-hover;
+      }
+    }
+  }
+
+}
+

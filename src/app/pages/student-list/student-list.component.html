@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="card">
+  <div class="card-header">
+    <h2>STUDENTS database</h2>
+  </div>
+  <div class="card-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>NAME</th>
+          <th>EMAIL</th>
+          <th>COURSE</th>
+          <th>ACTIONS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of Students; let iControl=index">
+          <td>{{student.idStudent}}</td>
+          <td class="student-name">{{student.Full_Name || student.Full_name}}</td>
+          <td class="student-email">{{student.email}}</td>
+          <td class="student-course">{{student.Course}}</td>
+
+          <td class="card-btns">
+            <a class="btn btn-addMark" routerLink = "/student-create-marks/{{student.idStudent}}">Add mark</a>
+            <a class="btn btn-modify" routerLink = "/student-modify/{{student.idStudent}}">Modify </a>
+            <a class="btn btn-delete" (click)="deleteStudent(student.idStudent, iControl)" role="button">Delete</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+</div>

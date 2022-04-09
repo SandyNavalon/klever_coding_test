@@ -1,0 +1,63 @@
+@use '../../../styles/index.scss' as *;
+
+.container{
+  background: transparent;
+  display: flex;
+}
+.card{
+  @include card;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border-radius: 20px;
+
+  &-btns{
+    display: flex;
+    align-items: center;
+
+    .btn{
+      @include btn;
+      margin-right: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center ;
+      width: 90px;
+
+
+      &-addMark{
+        border: 1px solid #002455;
+        color: #002455;
+        font-size: 15px;
+      }
+
+      &-addMark:not([disabled]):hover{
+        @include btn-hover;
+      }
+
+      &-modify{
+        color: #4f5bcc;
+        border:1px solid #4f5bcc;
+      }
+      &-modify:not([disabled]):hover{
+        @include btn-hover;
+      }
+
+      &-delete{
+        color: #c93434f1;
+        border: 1px solid #c93434f1;
+      }
+
+      &-delete:not([disabled]):hover{
+        @include btn-hover;
+      }
+    }
+  }
+
+}
+
+.student-name{
+  text-transform: capitalize;
+}
+
+.student-email{
+  text-transform: lowercase;
+}

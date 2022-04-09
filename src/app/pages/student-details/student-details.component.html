@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="card">
+  <div class="card-header">
+    <h2>STUDENTS marks </h2>
+  </div>
+  <div class="card-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>NAME</th>
+          <th>SUBJECT</th>
+          <th>SUBJECT ID</th>
+          <th>GRADE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of Marks">
+          <td>{{item.Student}}</td>
+          <td class="student-name">{{item.Full_Name || item.Full_name}}</td>
+          <td class="student-subject">{{item.Name}}</td>
+          <td class="student-idSubject">{{item.idSubject}}</td>
+          <td class="student-grade">{{item.Grade}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+</div>

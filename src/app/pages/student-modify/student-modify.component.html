@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h2>Modify student</h2>
+    </div>
+    <div class="card-body">
+      <form ngNativeValidate [formGroup]="studentForm" (ngSubmit)="sendData()">
+        <div class="mb-3">
+          <label for="" class="form-label">Full name:</label>
+          <input required type="text"
+            class="form-control" formControlName="full_name" id="" aria-describedby="helpId" placeholder="name surname">
+        </div>
+
+        <div class="mb-3">
+          <label for="" class="form-label">Email:</label>
+          <input required type="email"
+            class="form-control" formControlName="email" id="" aria-describedby="helpId" placeholder="email">
+        </div>
+
+        <div class="mb-3">
+          <label for="" class="form-label">Course:</label>
+          <input required type="text"
+            class="form-control" formControlName="course" id="" aria-describedby="helpId" placeholder="course">
+        </div>
+
+        <div class="btn-group" role="group" aria-label="">
+          <button type="submit" class="btn btn-modify">Modify</button>
+          <button type="button" routerLink="/student-list" class="btn btn-cancel">Cancel</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
